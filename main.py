@@ -1,11 +1,13 @@
 import unittest
 import student_code
+import imp
+
+imp.reload(student_code)
 
 class SetupTest(unittest.TestCase):
     def test1(self):
         result = student_code.hello_world()
-        print(result)
-        self.assertTrue(result, "wrong!")
+        self.assertTrue(result)
 
 if __name__ == '__main__':
     unittest.main()
